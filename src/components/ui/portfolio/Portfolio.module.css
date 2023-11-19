@@ -1,0 +1,36 @@
+.title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(249 115 22);
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.portfolio-link {
+  width: 400px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  transition: 0.3s all;
+  border-radius: 20px;
+}
+
+.portfolio-link:hover {
+  background-color: #3e4861;
+}
+
+.portfolio-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
