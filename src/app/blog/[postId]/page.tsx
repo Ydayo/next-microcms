@@ -38,8 +38,10 @@ const StaticDetailPage = async ({
   return (
     <>
       <Header />
-      <Link href={"/blog"}>戻る</Link>
       <div className={styles.container}>
+        <Link href={"/blog"} className={styles["back-home"]}>
+          戻る
+        </Link>
         <h1 className={styles["blog-title"]}>{post.title}</h1>
         <div className={styles["blog-contents"]}>{parse(post.content)}</div>
       </div>

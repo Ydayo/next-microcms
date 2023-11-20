@@ -61,6 +61,27 @@
   color: white;
 }
 
+.scroll-top {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  border: none;
+  background-color: #0f172a;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s all;
+  color: white;
+}
+
+.scroll-top:hover {
+  background-color: rgb(249 115 22);
+  border: none;
+}
+
 .fixed {
   width: 100%;
   position: fixed;

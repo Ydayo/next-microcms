@@ -18,9 +18,6 @@ const Top = () => {
         <Skill />
         <Portfolio />
         <SeeMore />
-        <button type="button" onClick={handleScroll}>
-          Top
-        </button>
       </div>
       <Footer />
     </>
