@@ -1,19 +1,18 @@
-import Header from "@/components/header/Header";
-import { Portfolio } from "@/components/ui/portfolio/Portfolio";
-import Skill from "@/components/ui/skill/Skill";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import { Portfolio } from "@/components/ui/Portfolio/Portfolio";
+import Skill from "@/components/ui/Skill/Skill";
 import styles from "@/styles/page.module.css";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <div className={styles.container}>
-        <Header />
-        <div className={styles.main}>
-          <Skill />
-          <Portfolio />
-        </div>
-        {/* <Footer /> */}
+        <Skill />
+        <Portfolio />
       </div>
+      <Footer />
     </>
   );
 }
