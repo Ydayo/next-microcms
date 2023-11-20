@@ -49,6 +49,18 @@
   background-color: #3e4861;
 }
 
+.link-p {
+  text-decoration: none;
+}
+
+.blog-title {
+  color: white;
+}
+
+.blog-contents {
+  color: white;
+}
+
 .fixed {
   width: 100%;
   position: fixed;

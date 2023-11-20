@@ -2,8 +2,8 @@ import clsx from "clsx";
 import Link from "next/link";
 import { getList } from "../_libs/microcms";
 import styles from "../../styles/page.module.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "@/components/ui/Header/Header";
+import Footer from "@/components/ui/Footer/Footer";
 
 // キャッシュを利用しない
 // キャッシュを利用しない場合、常にレンダリングを行うSSRになる
@@ -32,7 +32,7 @@ export default async function StaticPageBlog() {
               key={post.id}
             >
               {post.title}
-              <p>{post.createdAt}</p>
+              <p className={styles["link-p"]}>{post.createdAt}</p>
             </Link>
           ))}
         </div>

@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import { getDetail, getList } from "../../_libs/microcms";
 import styles from "../../../styles/page.module.css";
+import Header from "@/components/ui/Header/Header";
+import Footer from "@/components/ui/Footer/Footer";
+import Link from "next/link";
+import { NextPage } from "next";
 
 // キャッシュを利用しない
 // キャッシュを利用しない場合、常にレンダリングを行うSSRになる
@@ -32,10 +36,17 @@ const StaticDetailPage = async ({
   }
 
   return (
-    <div className={styles.container}>
-      <h1>{post.title}</h1>
-      <div>{parse(post.content)}</div>
-    </div>
+    <>
+      <Header />
+      <Link href={"/blog"}>戻る</Link>
+      <div className={styles.container}>
+        <h1 className={styles["blog-title"]}>{post.title}</h1>
+        <div className={styles["blog-contents"]}>{parse(post.content)}</div>
+      </div>
+      <div className={styles.fixed}>
+        <Footer />
+      </div>
+    </>
   );
 };
 
