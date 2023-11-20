@@ -6,7 +6,7 @@ import styles from "../../../styles/page.module.css";
 // キャッシュを利用しない
 // キャッシュを利用しない場合、常にレンダリングを行うSSRになる
 // キャッシュを利用する場合、ISRになる
-export const revalidate = 0;
+export const revalidate = 10;
 
 export async function generateStaticParams() {
   const { contents } = await getList();

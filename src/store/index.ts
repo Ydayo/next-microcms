@@ -2,22 +2,32 @@ export const skillIcons = [
   {
     id: 1,
     icon: "/html-5.png",
+    width: 512,
+    height: 512,
   },
   {
     id: 2,
     icon: "/css-3.png",
+    width: 512,
+    height: 512,
   },
   {
     id: 3,
     icon: "/js.png",
+    width: 512,
+    height: 512,
   },
   {
     id: 4,
     icon: "/react.png",
+    width: 512,
+    height: 512,
   },
   {
     id: 5,
     icon: "/next-js.png",
+    width: 300,
+    height: 181,
   },
   {
     id: 6,

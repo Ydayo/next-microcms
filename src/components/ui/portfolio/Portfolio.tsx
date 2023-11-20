@@ -26,7 +26,7 @@ export const Portfolio: NextPage = () => {
             >
               <Image
                 src={src}
-                width={500}
+                width={400}
                 height={300}
                 alt="PortfolioImage"
                 className={styles["portfolio-img"]}

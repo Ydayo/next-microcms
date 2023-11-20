@@ -6,6 +6,8 @@ import styles from "./Skill.module.css";
 interface ImageProps {
   id: number;
   icon: string;
+  width?: number;
+  height?: number;
 }
 
 const Skill = () => {
@@ -13,17 +15,20 @@ const Skill = () => {
     <div>
       <h1 className={styles["skill-title"]}>Skill</h1>
       <ul className={styles.icons}>
-        {skillIcons.map(({ id, icon }: ImageProps) => (
-          <li key={id} className={styles.icon}>
-            <Image
-              src={icon}
-              width={100}
-              height={100}
-              alt="Skill Icon"
-              className={styles["icon-img"]}
-            />
-          </li>
-        ))}
+        {skillIcons.map(
+          ({ id, icon, width = 100, height = 100 }: ImageProps) => (
+            <li key={id} className={styles.icon}>
+              <Image
+                src={icon}
+                width={width}
+                height={height}
+                alt="Skill Icon"
+                className={styles["icon-img"]}
+                priority
+              />
+            </li>
+          )
+        )}
       </ul>
     </div>
   );
