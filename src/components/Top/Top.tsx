@@ -6,15 +6,12 @@ import { Portfolio } from "../ui/Portfolio/Portfolio";
 import SeeMore from "../ui/SeeMore/SeeMore";
 import Footer from "../ui/Footer/Footer";
 import styles from "@/styles/page.module.css";
-import { useScroll } from "@/hooks/Scroll";
 
 const Top = () => {
-  const { scrollRef, handleScroll } = useScroll();
-
   return (
     <>
       <Header />
-      <div className={styles.container} ref={scrollRef}>
+      <div className={styles.container}>
         <Skill />
         <Portfolio />
         <SeeMore />
