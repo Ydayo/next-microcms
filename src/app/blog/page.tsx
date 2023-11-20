@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import { getList } from "../_libs/microcms";
 import styles from "../../styles/page.module.css";
@@ -19,30 +20,22 @@ export default async function StaticPageBlog() {
   return (
     <>
       <Header />
-      <div className={styles.container}>
-        <Link href={"/"} style={{ color: "white", padding: 10 }}>
+      <div className={clsx(styles.blog, styles.container)}>
+        <Link href={"/"} className={styles["back-home"]}>
           戻る
         </Link>
-        <ul style={{ margin: 0, padding: 0 }}>
-          {contents.map((post) => {
-            return (
-              <li
-                key={post.id}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  listStyle: "none",
-                }}
-              >
-                <Link href={`/blog/${post.id}`} style={{ color: "white" }}>
-                  {post.title}
-                </Link>
-                <p>{post.createdAt}</p>
-              </li>
-            );
-          })}
-        </ul>
+        <div className={styles["blog-lists"]}>
+          {contents.map((post) => (
+            <Link
+              href={`/blog/${post.id}`}
+              className={styles["blog-list"]}
+              key={post.id}
+            >
+              {post.title}
+              <p>{post.createdAt}</p>
+            </Link>
+          ))}
+        </div>
       </div>
       <div className={styles.fixed}>
         <Footer />

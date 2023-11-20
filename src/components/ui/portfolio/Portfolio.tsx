@@ -2,14 +2,7 @@ import { portfolioItem } from "@/store";
 import Image from "next/image";
 import styles from "./Portfolio.module.css";
 import { NextPage } from "next";
-
-interface PortfolioProps {
-  id: number;
-  src: string;
-  title: string;
-  description: string;
-  link: string;
-}
+import { PortfolioImageProps } from "@/types/ImageTypes";
 
 export const Portfolio: NextPage = () => {
   return (
@@ -17,7 +10,7 @@ export const Portfolio: NextPage = () => {
       <h1 className={styles.title}>Portfolio</h1>
       <div className={styles["portfolio-items"]}>
         {portfolioItem.map(
-          ({ id, src, title, description, link }: PortfolioProps) => (
+          ({ id, src, title, description, link }: PortfolioImageProps) => (
             <a
               href={link}
               target="_blank"

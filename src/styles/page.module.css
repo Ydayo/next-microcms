@@ -13,6 +13,42 @@
   margin: 0 auto;
 }
 
+.back-home {
+  display: inline-block;
+  color: white;
+  margin: 20px 0;
+}
+
+.back-home:hover {
+  color: rgb(249 115 22);
+}
+
+.blog {
+  margin: 50px auto;
+}
+
+.blog-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.blog-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.blog-list:hover {
+  background-color: #3e4861;
+}
+
 .fixed {
   width: 100%;
   position: fixed;

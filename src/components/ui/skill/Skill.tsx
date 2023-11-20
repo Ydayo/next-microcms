@@ -2,13 +2,7 @@ import { skillIcons } from "@/store";
 import Image from "next/image";
 import React from "react";
 import styles from "./Skill.module.css";
-
-interface ImageProps {
-  id: number;
-  icon: string;
-  width?: number;
-  height?: number;
-}
+import { ImageProps } from "@/types/ImageTypes";
 
 const Skill = () => {
   return (
