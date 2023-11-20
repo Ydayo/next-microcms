@@ -25,13 +25,49 @@ export const skillIcons = [
   },
   {
     id: 5,
+    icon: "/typescript.png",
+    width: 480,
+    height: 480,
+  },
+  {
+    id: 6,
     icon: "/next-js.png",
     width: 300,
     height: 181,
   },
   {
-    id: 6,
+    id: 7,
+    icon: "/sass.png",
+    width: 480,
+    height: 480,
+  },
+  {
+    id: 8,
     icon: "/tailwindcss.svg",
+  },
+  {
+    id: 9,
+    icon: "/docker.png",
+    width: 240,
+    height: 240,
+  },
+  {
+    id: 10,
+    icon: "/postman.png",
+    width: 96,
+    height: 96,
+  },
+  {
+    id: 11,
+    icon: "/git.png",
+    width: 480,
+    height: 480,
+  },
+  {
+    id: 12,
+    icon: "/npm.png",
+    width: 480,
+    height: 480,
   },
 ];
 

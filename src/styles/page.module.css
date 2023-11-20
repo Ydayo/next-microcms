@@ -88,6 +88,15 @@
   bottom: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .blog {
+    margin: 50px 10px;
+  }
+  .blog-list {
+    padding: 5px 15px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .blog {
     margin: 50px 10px;
@@ -103,5 +112,9 @@
 
   .link-p {
     display: none;
+  }
+
+  .delete-fixed {
+    position: fixed;
   }
 }

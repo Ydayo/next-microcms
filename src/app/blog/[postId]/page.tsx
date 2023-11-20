@@ -5,7 +5,7 @@ import styles from "../../../styles/page.module.css";
 import Header from "@/components/ui/Header/Header";
 import Footer from "@/components/ui/Footer/Footer";
 import Link from "next/link";
-import { NextPage } from "next";
+import clsx from "clsx";
 
 // キャッシュを利用しない
 // キャッシュを利用しない場合、常にレンダリングを行うSSRになる
@@ -45,7 +45,7 @@ const StaticDetailPage = async ({
         <h1 className={styles["blog-title"]}>{post.title}</h1>
         <div className={styles["blog-contents"]}>{parse(post.content)}</div>
       </div>
-      <div className={styles.fixed}>
+      <div className={clsx(styles.fixed, styles["delete-fixed"])}>
         <Footer />
       </div>
     </>

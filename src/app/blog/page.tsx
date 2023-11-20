@@ -32,7 +32,7 @@ export default async function StaticPageBlog() {
               key={post.id}
             >
               {post.title.length > 15
-                ? `${post.title.substr(0, 15)}...`
+                ? `${post.title.substring(0, 15)}...`
                 : post.title}
               <p className={styles["link-p"]}>{post.createdAt}</p>
             </Link>
