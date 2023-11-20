@@ -40,7 +40,12 @@ export const portfolioItem = [
     id: 1,
     src: "/react-blog.png",
     title: "React.jsを使用したBlog",
-    description: `text`,
+    description: `
+      私がフロントエンドエンジニアとして勉強して2ヶ月目に作成した初めての技術ブログになります。
+      React.jsを使用し、react-pagination-barやEmotionなどのライブラリを使用し、動きの
+      あるブログサイトに仕上げました。現在、振り返ってコードを見ると汚いところやもっとこう書いたら
+      効率的だなと感じることも多いですが、思いれのあるポートフォリオとなっています。
+    `,
     link: "https://ishikawatokyo-blog.netlify.app/",
   },
   {
