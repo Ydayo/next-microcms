@@ -1,4 +1,4 @@
-import Top from "@/components/Top/Top";
+import Mask from "@/components/Mask/Mask";
 export default function Home() {
-  return <Top />;
+  return <Mask />;
 }
