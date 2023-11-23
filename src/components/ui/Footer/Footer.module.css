@@ -13,3 +13,8 @@
   font-weight: 600;
   color: white;
 }
+
+.header-logo {
+  width: 200px;
+  height: 40px;
+}
