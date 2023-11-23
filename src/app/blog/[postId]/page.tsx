@@ -45,9 +45,7 @@ const StaticDetailPage = async ({
         <h1 className={styles["blog-title"]}>{post.title}</h1>
         <div className={styles["blog-contents"]}>{parse(post.content)}</div>
       </div>
-      <div className={clsx(styles.fixed, styles["delete-fixed"])}>
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 };
