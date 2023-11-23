@@ -58,7 +58,40 @@
 }
 
 .blog-contents {
+  height: 100vh;
   color: white;
+}
+
+.blog-contents > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.blog-contents > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 40px 0 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-contents > p {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+.blog-contents > ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.blog-contents > figure > img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .scroll-top {
