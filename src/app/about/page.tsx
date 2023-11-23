@@ -1,4 +1,4 @@
-import Top from "@/components/Top/Top";
+import Top from "@/components/pages/Top/Top";
 const page = () => {
   return <Top />;
 };
