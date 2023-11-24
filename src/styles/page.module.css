@@ -27,6 +27,10 @@
   margin: 50px auto;
 }
 
+.blog-container {
+  padding: 0 10px;
+}
+
 .blog-lists {
   display: flex;
   flex-direction: column;

@@ -38,7 +38,7 @@ const StaticDetailPage = async ({
   return (
     <>
       <Header />
-      <div className={styles.container}>
+      <div className={clsx(styles.container, styles["blog-container"])}>
         <Link href={"/blog"} className={styles["back-home"]}>
           戻る
         </Link>
