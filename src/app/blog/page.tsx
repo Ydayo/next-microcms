@@ -39,9 +39,7 @@ export default async function StaticPageBlog() {
           ))}
         </div>
       </div>
-      <div className={styles.fixed}>
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
