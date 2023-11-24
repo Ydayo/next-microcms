@@ -1,0 +1,55 @@
+.see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.see-more > li {
+  list-style: none;
+}
+
+.see-more > li:nth-child(2) {
+  margin-left: 100px;
+}
+
+.see-more > li:nth-child(3) {
+  margin: 0 10px;
+}
+
+.see-more > li > a {
+  font-size: 20px;
+  color: white;
+}
+
+.see-more > li > a:hover {
+  color: rgb(249 115 22);
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .see-more {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .see-more > li {
+    font-size: 20px;
+  }
+
+  .see-more > li:nth-child(2) {
+    margin-left: 0px;
+  }
+  .see-more > li:not(:first-child) {
+    margin-top: 30px;
+  }
+}

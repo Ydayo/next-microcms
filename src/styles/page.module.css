@@ -1,0 +1,157 @@
+.layout {
+  box-sizing: border-box;
+  background: #0f172a;
+  font-family: var(--font-poppins);
+  color: white;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.back-home {
+  display: inline-block;
+  color: white;
+  margin: 20px 0;
+}
+
+.back-home:hover {
+  color: rgb(249 115 22);
+}
+
+.blog {
+  margin: 50px auto;
+}
+
+.blog-container {
+  padding: 0 10px;
+}
+
+.blog-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.blog-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.blog-list:hover {
+  background-color: #3e4861;
+}
+
+.link-p {
+  text-decoration: none;
+}
+
+.blog-title {
+  color: white;
+}
+
+.blog-contents {
+  height: 100vh;
+  color: white;
+}
+
+.blog-contents > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.blog-contents > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 40px 0 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-contents > p {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+.blog-contents > ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.blog-contents > figure > img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.scroll-top {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  border: none;
+  background-color: #0f172a;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s all;
+  color: white;
+}
+
+.scroll-top:hover {
+  background-color: rgb(249 115 22);
+  border: none;
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .blog {
+    margin: 50px 10px;
+  }
+  .blog-list {
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blog {
+    margin: 50px 10px;
+  }
+
+  .blog-list {
+    padding: 20px 10px;
+  }
+
+  .fixed {
+    position: absolute;
+  }
+
+  .link-p {
+    display: none;
+  }
+
+  .delete-fixed {
+    position: fixed;
+  }
+}
