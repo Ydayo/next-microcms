@@ -13,6 +13,7 @@ const Header: FC = () => {
           width={500}
           height={500}
           className={styles["header-logo"]}
+          priority
         />
       </Link>
     </header>

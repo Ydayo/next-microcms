@@ -1,5 +1,5 @@
 "use client";
-import { Blog } from "@/app/_libs/microcms";
+import { Blog } from "@/libs/microcms";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import styles from "./Pagination.module.css";

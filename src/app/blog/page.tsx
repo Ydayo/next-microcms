@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { getList } from "../_libs/microcms";
+import { getList } from "../../libs/microcms";
 import styles from "../../styles/page.module.css";
 import Header from "@/components/ui/Header/Header";
 import Footer from "@/components/ui/Footer/Footer";
@@ -10,7 +10,7 @@ import Footer from "@/components/ui/Footer/Footer";
 // キャッシュを利用する場合、ISRになる
 export const revalidate = 10;
 
-export default async function StaticPageBlog() {
+export default async function BlogLists() {
   const { contents } = await getList();
 
   if (!contents || contents.length === 0) {
