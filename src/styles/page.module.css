@@ -58,7 +58,7 @@
 }
 
 .blog-contents {
-  height: 100vh;
+  height: 100svh;
   color: white;
 }
 
@@ -142,15 +142,15 @@
   }
 
   .blog-list {
-    padding: 20px 10px;
+    padding: 0.5rem 10px;
+  }
+
+  .blog-list p {
+    font-size: 12px;
   }
 
   .fixed {
     position: absolute;
-  }
-
-  .link-p {
-    display: none;
   }
 
   .delete-fixed {
