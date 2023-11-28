@@ -1,51 +1,52 @@
 "use client";
-import { Blog } from "@/libs/microcms";
-import { useState } from "react";
-import ReactPaginate from "react-paginate";
-import styles from "./Pagination.module.css";
-import { useRouter } from "next/navigation";
 
-type PaginationProps = {
-  itemsPerPage?: number;
-  contents: Blog[];
+import { FC } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import styles from "./Pagination.module.css";
+import { MaterialSymbolsChevronLeft } from "@/components/icons/ChevronLeft";
+import { MaterialSymbolsChevronRight } from "@/components/icons/ChevronRight";
+
+type PaginationControlsProps = {
+  hasNextPage: boolean;
+  hasPrevPage: boolean;
 };
 
-const Pagination = ({ contents }: PaginationProps) => {
-  const itemsPerPage = 7;
+const PaginationControls: FC<PaginationControlsProps> = ({
+  hasNextPage,
+  hasPrevPage,
+}) => {
   const router = useRouter();
-  const [itemOffset, setItemOffset] = useState(0);
-  const endOffset = itemOffset + itemsPerPage;
-  const currentItems = contents.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(contents.length / itemsPerPage);
+  const searchParams = useSearchParams();
 
-  const handlePageClick = ({ selected }: { selected: number }) => {
-    const newOffset = (selected * itemsPerPage) % contents.length;
-    setItemOffset(newOffset);
-    router.push(`?page=${selected + 1}`);
-  };
-
+  const page = searchParams.get("page") ?? "1";
+  const per_page = searchParams.get("per_page") ?? "8";
   return (
-    <ReactPaginate
-      breakLabel="..."
-      nextLabel="next >"
-      onPageChange={handlePageClick}
-      pageRangeDisplayed={5}
-      pageCount={pageCount}
-      previousLabel="< previous"
-      renderOnZeroPageCount={null}
-      containerClassName={styles["paginate-container"]}
-      pageClassName={styles["paginate-number"]}
-      pageLinkClassName={styles["paginate-number-link"]}
-      previousLinkClassName={styles["prev-link"]}
-      nextLinkClassName={styles["prev-link"]}
-      activeClassName={styles["is-active"]}
-      activeLinkClassName={styles["is-active-link"]}
-      breakClassName={styles["break-style"]}
-      breakLinkClassName={styles["break-style"]}
-      previousClassName={styles["page-item"]}
-      disabledClassName={styles["is-disabled"]}
-    />
+    <div className={styles["pagination-container"]}>
+      <button
+        className={styles["pagination-btn"]}
+        disabled={!hasPrevPage}
+        onClick={() => {
+          router.push(`/blog/?page=${Number(page) - 1}`);
+        }}
+      >
+        <MaterialSymbolsChevronLeft />
+      </button>
+
+      <div style={{ color: "white" }}>
+        {page} / {Math.ceil(10 / Number(per_page))}
+      </div>
+
+      <button
+        className={styles["pagination-btn"]}
+        disabled={!hasNextPage}
+        onClick={() => {
+          router.push(`/blog/?page=${Number(page) + 1}`);
+        }}
+      >
+        <MaterialSymbolsChevronRight />
+      </button>
+    </div>
   );
 };
 
-export default Pagination;
+export default PaginationControls;

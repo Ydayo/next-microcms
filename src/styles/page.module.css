@@ -53,10 +53,6 @@
   background-color: #3e4861;
 }
 
-.link-p {
-  text-decoration: none;
-}
-
 .blog-title {
   color: white;
 }
@@ -123,6 +119,12 @@
   width: 100%;
   position: fixed;
   bottom: 0;
+}
+
+.pagination-fixed {
+  width: 100%;
+  position: fixed;
+  bottom: 130px;
 }
 
 @media screen and (max-width: 1000px) {
