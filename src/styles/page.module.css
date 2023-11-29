@@ -127,6 +127,14 @@
   bottom: 130px;
 }
 
+.loading {
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1000px) {
   .blog {
     margin: 50px 10px;

@@ -4,7 +4,6 @@ import { getDetail, getList } from "@/libs/microcms";
 import styles from "../../../styles/page.module.css";
 import Header from "@/components/ui/Header/Header";
 import Footer from "@/components/ui/Footer/Footer";
-import Link from "next/link";
 import clsx from "clsx";
 
 // キャッシュを利用しない
