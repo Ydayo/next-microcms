@@ -7,6 +7,16 @@ import {
 } from "microcms-js-sdk";
 import { notFound } from "next/navigation";
 
+export type Category = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  name: string;
+} & MicroCMSDate &
+  MicroCMSContentId;
+
 export type Blog = {
   id: string;
   createdAt?: string;
@@ -16,6 +26,7 @@ export type Blog = {
   title: string;
   content: string;
   eyecatch?: MicroCMSImage;
+  category?: Category;
 } & MicroCMSDate &
   MicroCMSContentId;
 
@@ -45,3 +56,16 @@ export const getDetail = async (
   });
   return detailData;
 };
+
+export const getCategory = async (queries?: MicroCMSQueries) => {
+  const categoryData = await client
+    .getList<Category>({
+      endpoint: "categories",
+      queries,
+    })
+    .catch(notFound);
+  console.log(categoryData);
+  return categoryData;
+};
+
+getCategory();

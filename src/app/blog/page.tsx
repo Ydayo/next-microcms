@@ -6,7 +6,7 @@ import Header from "@/components/ui/Header/Header";
 import Footer from "@/components/ui/Footer/Footer";
 import PaginationControls from "@/components/ui/Pagination/Pagination";
 
-// キャッシュを利用しない
+// キャッシュを利用しない場合 0 を設定
 // キャッシュを利用しない場合、常にレンダリングを行うSSRになる
 // キャッシュを利用する場合、ISRになる
 export const revalidate = 10;
