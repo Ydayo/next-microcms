@@ -8,14 +8,20 @@ const Mask = () => {
     <div className={styles.mask}>
       <ul className={styles["mask-list"]}>
         <li className={styles["ishikawa-img"]}>
-          <Image
+          {/* <Image
             src={"/ishikawa-tokyo-logo-white-transparent.png"}
             alt="Ishikawa Tokyo"
             width={500}
             height={100}
             className={styles["ishikawa-tokyo"]}
             priority
-          />
+          /> */}
+          <h1
+            className={styles["ishikawa-tokyo"]}
+            style={{ color: "white", fontSize: "100px" }}
+          >
+            Tokyo
+          </h1>
         </li>
         <li>
           <Link href={"/about"} className={styles.link}>

@@ -79,7 +79,8 @@ export const portfolioItem = [
     description: `
       React.jsで作成したデモブログ
     `,
-    link: "https://ishikawatokyo-blog.netlify.app/",
+    // link: "https://ishikawatokyo-blog.netlify.app/",
+    link: "#id",
   },
   {
     id: 2,
@@ -88,7 +89,8 @@ export const portfolioItem = [
     description: `
       Starbuckのクローンサイトになります。
     `,
-    link: "https://ydayo.github.io/gibhub.io-starbucks/",
+    // link: "https://ydayo.github.io/gibhub.io-starbucks/",
+    link: "#id",
   },
   {
     id: 3,
@@ -97,7 +99,8 @@ export const portfolioItem = [
     description: `
       Bluebottleクローンサイトになります。
     `,
-    link: "https://ydayo.github.io/blue-bottle/",
+    // link: "https://ydayo.github.io/blue-bottle/",
+    link: "#id",
   },
   {
     id: 4,
@@ -106,6 +109,7 @@ export const portfolioItem = [
     description: `
       Golf Wangクローンサイトになります。
     `,
-    link: "https://ydayo.github.io/golf.wang-clone/",
+    // link: "https://ydayo.github.io/golf.wang-clone/",
+    link: "#id",
   },
 ];

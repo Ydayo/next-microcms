@@ -10,9 +10,7 @@ const SeeMore: NextPage = () => {
         <Image src={"/github.png"} width={100} height={100} alt="github" />
       </li>
       <li>
-        <a href="https://github.com/Ydayo" target="_blank">
-          My Github
-        </a>
+        <a href="#id">My Github</a>
       </li>
       <li>or</li>
       <li>

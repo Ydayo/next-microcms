@@ -8,6 +8,10 @@
   border-bottom: 1px solid white;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .header-title {
   font-size: 35px;
   font-weight: 600;
