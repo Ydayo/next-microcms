@@ -108,6 +108,13 @@
   cursor: pointer;
   transition: 0.2s all;
   color: white;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visibility {
+  visibility: visible;
+  opacity: 1;
 }
 
 .scroll-top:hover {

@@ -3,9 +3,9 @@ import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header: FC = () => {
+const Header: FC<{ scrollRef: any }> = ({ scrollRef }) => {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} ref={scrollRef}>
       <Link href={"/"} className={styles.link}>
         {/* <Image
           src={"/ishikawa-tokyo-logo-white-transparent.png"}
