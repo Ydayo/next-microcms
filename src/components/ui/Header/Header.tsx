@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 
 type Props = {
-  scrollRef: RefObject<HTMLElement> | null;
+  scrollRef?: RefObject<HTMLElement> | null;
 };
 
 const Header: FC<Props> = ({ scrollRef }) => {
