@@ -1,9 +1,9 @@
 "use client";
-import { MouseEvent, useEffect, useRef, useState } from "react";
+import { LegacyRef, MouseEvent, useEffect, useRef, useState } from "react";
 
 export const useScroll = (threshold = 10) => {
   const [scrolled, setScrolled] = useState(false);
-  const scrollRef = useRef<HTMLHeadElement | null>(null);
+  const scrollRef = useRef<HTMLElement | null>(null);
   const handleScroll = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     scrollRef.current?.scrollIntoView({
