@@ -1,9 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, LegacyRef } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header: FC<{ scrollRef: any }> = ({ scrollRef }) => {
+const Header: FC<{ scrollRef: LegacyRef<HTMLElement> | undefined }> = ({
+  scrollRef,
+}) => {
   return (
     <header className={styles.header} ref={scrollRef}>
       <Link href={"/"} className={styles.link}>
