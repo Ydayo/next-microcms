@@ -1,5 +1,5 @@
 "use client";
-import { LegacyRef, MouseEvent, useEffect, useRef, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 
 export const useScroll = (threshold = 10) => {
   const [scrolled, setScrolled] = useState(false);
