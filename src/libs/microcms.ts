@@ -67,5 +67,3 @@ export const getCategory = async (queries?: MicroCMSQueries) => {
   console.log(categoryData);
   return categoryData;
 };
-
-getCategory();
